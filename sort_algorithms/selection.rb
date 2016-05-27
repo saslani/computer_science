@@ -5,11 +5,11 @@ def sort(array)
 end
 
 def selection_sort!(keys)
-  for i in 0..keys.size-2
+  (0..keys.size-2).each do |i|
     min = i
-    for j in i+1..keys.size-1
+    (i+1..keys.size-1).each do |j|
       min = j if keys[j] < keys[min]
-      end
+    end
     keys[i], keys[min] = keys[min], keys[i]
   end
   keys
